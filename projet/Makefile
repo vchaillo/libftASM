@@ -6,7 +6,7 @@
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/24 16:06:11 by vchaillo          #+#    #+#              #
-#    Updated: 2015/03/27 05:07:46 by vchaillo         ###   ########.fr        #
+#    Updated: 2015/03/27 06:43:48 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,12 @@ CFLAGS	=	-Wall -Wextra -Werror
 
 SRC		=	ft_isdigit.s \
 			ft_isascii.s \
+			ft_isprint.s \
+			ft_isalpha.s \
+			ft_isalnum.s \
+			ft_islower.s \
+			ft_isupper.s \
+			ft_toupper.s \
 
 INC		= -I inc/
 
