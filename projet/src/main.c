@@ -122,5 +122,18 @@ int		main(int ac, char **av)
 	}
 	if (ft_toupper(c) == toupper(c))
 		printf("ft_toupper OK :)\n");	
+/*
+**	Test of function ft_tolower
+*/
+	for (c = 0; c < 1000; c++)
+	{
+		if (ft_tolower(c) != tolower(c))
+		{
+			printf("ft_tolower KO :(, %d\n", c);
+			break;
+		}
+	}
+	if (ft_tolower(c) == tolower(c))
+		printf("ft_tolower OK :)\n");	
 	return (0);
 }
