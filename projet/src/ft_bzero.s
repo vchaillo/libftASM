@@ -1,27 +1,25 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    ft_toupper.s                                       :+:      :+:    :+:    #
+#    ft_bzero.s                                         :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2015/03/27 06:27:41 by vchaillo          #+#    #+#              #
-#    Updated: 2015/03/28 20:31:29 by vchaillo         ###   ########.fr        #
+#    Created: 2015/04/01 23:42:15 by vchaillo          #+#    #+#              #
+#    Updated: 2015/04/01 23:42:33 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 section .text
-	extern _ft_islower
-	global _ft_toupper
+	global _ft_bzero
 
-_ft_toupper:
-	call _ft_islower
-	cmp rax, 0
-	je end
-	mov rax, rdi
-	sub rax, 32
-	ret
-
-end:
-	mov rax, rdi
+_ft_bzero:
+	jmp end_loop
+	begin_loop:
+	mov [rdi], byte 0
+	inc rdi
+	dec rsi
+	end_loop:
+	cmp rsi, 0
+	jne begin_loop
 	ret
