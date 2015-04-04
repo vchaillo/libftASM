@@ -6,7 +6,7 @@
 /*   By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/27 04:27:13 by vchaillo          #+#    #+#             */
-/*   Updated: 2015/04/04 18:36:06 by vchaillo         ###   ########.fr       */
+/*   Updated: 2015/04/05 00:56:26 by vchaillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,5 +149,16 @@ int		main(int ac, char **av)
 **	Test of function ft_puts
 */
 	ft_puts("ft_puts    \033[32mOK\033[0m :)\n");
+/*
+**	Test of function ft_strcat
+*/
+	char	s1[3]="Hi";
+	char	s2[4]=" 42";
+
+	printf("ft_strcat  \033[32mOK\033[0m :)");
+	printf("	s1 = %s", s1);
+	printf("		s2 = %s", s2);
+//	printf("strcat result = %s", strcat(s1, s2));
+	printf("	ft_strcat result = %s\n", ft_strcat(s1, s2));
 	return (0);
 }

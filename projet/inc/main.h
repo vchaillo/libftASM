@@ -6,7 +6,7 @@
 /*   By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/27 05:00:57 by vchaillo          #+#    #+#             */
-/*   Updated: 2015/04/04 18:36:15 by vchaillo         ###   ########.fr       */
+/*   Updated: 2015/04/05 00:48:00 by vchaillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <string.h>
 
 int		ft_isdigit(int c);
 int		ft_isascii(int c);
@@ -29,5 +30,6 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	ft_bzero(void *s, size_t n);
 int		ft_puts(const char *s);
+char	*ft_strcat(char *restrict s1, const char *restrict s2);
 
 #endif
