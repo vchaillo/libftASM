@@ -28,6 +28,7 @@ SRC		=	ft_isdigit.s \
 			ft_toupper.s \
 			ft_tolower.s \
 			ft_bzero.s \
+			ft_puts.s \
 
 INC		= -I inc/
 

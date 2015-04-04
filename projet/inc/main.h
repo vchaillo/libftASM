@@ -15,6 +15,7 @@
 
 # include <ctype.h>
 # include <stdio.h>
+# include <unistd.h>
 
 int		ft_isdigit(int c);
 int		ft_isascii(int c);
@@ -26,5 +27,6 @@ int		ft_isupper(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	ft_bzero(void *s, size_t n);
+int		ft_puts(const char *s);
 
 #endif
