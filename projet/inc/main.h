@@ -6,7 +6,7 @@
 /*   By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/27 05:00:57 by vchaillo          #+#    #+#             */
-/*   Updated: 2015/04/01 23:36:52 by vchaillo         ###   ########.fr       */
+/*   Updated: 2015/04/04 18:36:15 by vchaillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <ctype.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <stdio.h>
 
 int		ft_isdigit(int c);
 int		ft_isascii(int c);
