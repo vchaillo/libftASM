@@ -6,7 +6,7 @@
 /*   By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/27 04:27:13 by vchaillo          #+#    #+#             */
-/*   Updated: 2015/04/05 00:56:26 by vchaillo         ###   ########.fr       */
+/*   Updated: 2015/04/05 01:16:53 by vchaillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@
 int		main(int ac, char **av)
 {
 	int		c;
-	char	test[12];
-	
-	test[6] = '1';
+
 	(void)ac;
 	(void)av;
 /*
@@ -140,6 +138,9 @@ int		main(int ac, char **av)
 /*
 **	Test of function ft_bzero
 */
+	char	test[12];
+	
+	test[6] = '1';
 	ft_bzero(test, sizeof(char) * 12);
 	if (test[6] != 0)
 		printf("ft_bzero   \033[31;1mKO\033[0m :(\n");
@@ -160,5 +161,18 @@ int		main(int ac, char **av)
 	printf("		s2 = %s", s2);
 //	printf("strcat result = %s", strcat(s1, s2));
 	printf("	ft_strcat result = %s\n", ft_strcat(s1, s2));
+/*
+**	Test of function ft_strlen
+*/
+	char	*s3="Une phrase";
+	size_t	a;
+	size_t	b;
+
+	a = strlen(s3);
+	b = ft_strlen(s3);
+	if (a == b)
+		printf("ft_strlen  \033[32mOK\033[0m :)");
+	printf("	strlen return = %d", (int)a);
+	printf("		ft_strlen return = %d\n", (int)b);
 	return (0);
 }

@@ -6,7 +6,7 @@
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/24 16:06:11 by vchaillo          #+#    #+#              #
-#    Updated: 2015/04/04 20:27:59 by vchaillo         ###   ########.fr        #
+#    Updated: 2015/04/05 00:57:30 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC		=	ft_isdigit.s \
 			ft_bzero.s   \
 			ft_puts.s    \
 			ft_strcat.s  \
+			ft_strlen.s  \
 
 INC		= -I inc/
 

@@ -1,36 +1,26 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    ft_puts.s                                          :+:      :+:    :+:    #
+#    ft_strlen.s                                        :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2015/04/04 19:32:26 by vchaillo          #+#    #+#              #
-#    Updated: 2015/04/05 01:08:59 by vchaillo         ###   ########.fr        #
+#    Created: 2015/04/05 00:57:06 by vchaillo          #+#    #+#              #
+#    Updated: 2015/04/05 01:08:51 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-%define STDOUT 1
-%define WRITE 0x2000004
-
 section .text
-	global _ft_puts
+	global _ft_strlen
 
-_ft_puts:
-	mov rsi, rdi
-	mov rdi, STDOUT
-	mov rdx, 0
+_ft_strlen:
+	mov rax, 0
 	jmp end_loop
 
 start_loop:
-	inc rdx
+	inc rax
 
 end_loop:
-	cmp [rsi + rdx], byte 0
+	cmp [rdi + rax], byte 0
 	jne start_loop
-	mov rax, WRITE
-	syscall
-	mov rsi, 10
-	mov rdx, 1
-	syscall
 	ret
