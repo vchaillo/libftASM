@@ -6,7 +6,7 @@
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/24 16:06:11 by vchaillo          #+#    #+#              #
-#    Updated: 2015/04/05 09:17:34 by vchaillo         ###   ########.fr        #
+#    Updated: 2015/04/05 10:39:15 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,6 @@ test: $(NAME)
 
 cat_test: $(NAME)
 		@$(CC) $(CFLAGS) -o test_asm src/main_cat.c $(INC) $(NAME)
-		@./test_asm
 
 obj/%.o: src/%.s
 		@$(AS) -o $@ $<

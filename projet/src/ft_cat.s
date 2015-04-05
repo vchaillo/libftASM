@@ -6,7 +6,7 @@
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/05 06:35:01 by vchaillo          #+#    #+#              #
-#    Updated: 2015/04/05 07:24:18 by vchaillo         ###   ########.fr        #
+#    Updated: 2015/04/05 10:43:29 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,11 +23,11 @@ section .text
 _ft_cat:
 	while:
 		push rdi
-		;mov rsi, buff
 		lea rsi, [rel buff]
 		mov rdx, buff_size
 		mov rax, READ
 		syscall
+		jc end
 		cmp rax, 0
 		jle end
 		mov rdi, 1

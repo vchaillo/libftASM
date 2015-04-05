@@ -6,7 +6,7 @@
 /*   By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/27 04:27:13 by vchaillo          #+#    #+#             */
-/*   Updated: 2015/04/05 09:15:22 by vchaillo         ###   ########.fr       */
+/*   Updated: 2015/04/05 10:34:20 by vchaillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,6 +150,8 @@ int		main(int ac, char **av)
 **	Test of function ft_puts
 */
 	ft_puts("ft_puts    \033[32mOK\033[0m :)\n");
+	ft_puts(NULL);
+	ft_puts("aa\n(null)\n");
 /*
 **	Test of function ft_strcat
 */
