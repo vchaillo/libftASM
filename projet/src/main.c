@@ -6,7 +6,7 @@
 /*   By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/27 04:27:13 by vchaillo          #+#    #+#             */
-/*   Updated: 2015/04/05 01:16:53 by vchaillo         ###   ########.fr       */
+/*   Updated: 2015/04/05 02:36:50 by vchaillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -174,5 +174,14 @@ int		main(int ac, char **av)
 		printf("ft_strlen  \033[32mOK\033[0m :)");
 	printf("	strlen return = %d", (int)a);
 	printf("		ft_strlen return = %d\n", (int)b);
+/*
+**	Test of function ft_memset
+*/
+	char	str[7]="Coucou";
+
+	printf("ft_memset  \033[32mOK\033[0m :)");
+	printf("	str avant memset = %s", str);
+	ft_memset(str, 'v', 7);
+	printf("	str apres memset 'v'= %s", str);
 	return (0);
 }
