@@ -1,22 +1,21 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    ft_memset.s                                        :+:      :+:    :+:    #
+#    ft_memcpy.s                                        :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2015/04/05 01:18:36 by vchaillo          #+#    #+#              #
-#    Updated: 2015/04/05 03:14:46 by vchaillo         ###   ########.fr        #
+#    Created: 2015/04/05 02:38:10 by vchaillo          #+#    #+#              #
+#    Updated: 2015/04/05 03:14:37 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 section .text
-	global _ft_memset
+	global _ft_memcpy
 
-_ft_memset:
-	mov rbx, rdi
-	mov rax, rsi
+_ft_memcpy:
+	mov rbx, rsi
+	mov rax, rdi
 	mov rcx, rdx
-	rep stosb
-	mov rax, rbx
+	rep movsb
 	ret

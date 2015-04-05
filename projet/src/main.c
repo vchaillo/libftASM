@@ -6,7 +6,7 @@
 /*   By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/27 04:27:13 by vchaillo          #+#    #+#             */
-/*   Updated: 2015/04/05 02:36:50 by vchaillo         ###   ########.fr       */
+/*   Updated: 2015/04/05 03:14:55 by vchaillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,7 +160,7 @@ int		main(int ac, char **av)
 	printf("	s1 = %s", s1);
 	printf("		s2 = %s", s2);
 //	printf("strcat result = %s", strcat(s1, s2));
-	printf("	ft_strcat result = %s\n", ft_strcat(s1, s2));
+	printf("				ft_strcat result = %s\n", ft_strcat(s1, s2));
 /*
 **	Test of function ft_strlen
 */
@@ -173,7 +173,7 @@ int		main(int ac, char **av)
 	if (a == b)
 		printf("ft_strlen  \033[32mOK\033[0m :)");
 	printf("	strlen return = %d", (int)a);
-	printf("		ft_strlen return = %d\n", (int)b);
+	printf("					ft_strlen return = %d\n", (int)b);
 /*
 **	Test of function ft_memset
 */
@@ -182,6 +182,16 @@ int		main(int ac, char **av)
 	printf("ft_memset  \033[32mOK\033[0m :)");
 	printf("	str avant memset = %s", str);
 	ft_memset(str, 'v', 7);
-	printf("	str apres memset 'v'= %s", str);
+	printf("				str apres memset 'v'= %s", str);
+/*
+**	Test of function ft_memcpy
+*/
+	char	dst[8]="42 42 42";
+	char	src[6]="Hello";
+
+	printf("ft_memcpy  \033[32mOK\033[0m :)");
+	printf("	avant ft_memcpy : src = %s et dst = %s", src, dst);
+	ft_memcpy(dst, src, 5);
+	printf("		apres ft_memcpy : src = %s et dst = %s\n", src, dst);
 	return (0);
 }
