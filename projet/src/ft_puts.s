@@ -6,7 +6,7 @@
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/04 19:32:26 by vchaillo          #+#    #+#              #
-#    Updated: 2015/04/05 06:20:48 by vchaillo         ###   ########.fr        #
+#    Updated: 2015/04/05 08:50:17 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ section .text
 	global _ft_puts
 
 _ft_puts:
+	cmp rdi, 0
+	je end
 	mov rsi, rdi
 	mov rdi, STDOUT
 	mov rdx, 0
@@ -33,4 +35,7 @@ end_loop:
 	mov rsi, 10
 	mov rdx, 1
 	syscall
+	ret
+
+end:
 	ret

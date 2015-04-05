@@ -6,7 +6,7 @@
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/05 04:20:18 by vchaillo          #+#    #+#              #
-#    Updated: 2015/04/05 06:02:57 by vchaillo         ###   ########.fr        #
+#    Updated: 2015/04/05 08:48:45 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,21 +19,20 @@ section .text
 _ft_strdup:
 	cmp rdi, 0
 	je fail
+	push rsi
     push rdi
 	call _ft_strlen
+	push rax
 	mov rdi, rax
 	add rdi, 1
 	call _malloc
 	cmp rax, 0
 	je fail
-	mov rsi, rax
-	mov rcx, 0
-	pop rdi
-	push rdi
-	mov rbx, rsi
-	mov rax, rdi
-	rep movsb
-	pop rdi
+	mov rdi, rax
+	pop rdx
+	pop rsi
+	call _ft_memcpy
+	pop rsi
     ret
 
 fail:
