@@ -6,7 +6,7 @@
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/04 19:32:26 by vchaillo          #+#    #+#              #
-#    Updated: 2015/04/05 10:25:29 by vchaillo         ###   ########.fr        #
+#    Updated: 2015/04/05 11:55:49 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,11 +33,14 @@ start_loop:
 end_loop:
 	cmp [rsi + rdx], byte 0
 	jne start_loop
+	cmp [rsi + rdx], byte 10
+	je start_loop
 	mov rax, WRITE
 	syscall
 	mov rsi, 10
 	mov rdx, 1
 	syscall
+	mov rax, 10
 	ret
 
 end:
@@ -46,5 +49,5 @@ end:
 	mov rdx, 7
 	mov rax, WRITE
 	syscall
-	neg rax
+	mov rax, 10
 	ret

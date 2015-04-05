@@ -6,7 +6,7 @@
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/04/05 00:57:06 by vchaillo          #+#    #+#              #
-#    Updated: 2015/04/05 08:20:46 by vchaillo         ###   ########.fr        #
+#    Updated: 2015/04/05 10:57:58 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,15 +16,12 @@ section .text
 _ft_strlen:
 	cmp rdi, 0
 	je end
-	mov rax, 0
-	jmp end_loop
-
-start_loop:
-	inc rax
-
-end_loop:
-	cmp [rdi + rax], byte 0
-	jne start_loop
+	mov al, 0
+	mov rcx, -1
+	repne scasb
+	not rcx
+	sub rcx, 1
+	mov rax, rcx
 	ret
 
 end:

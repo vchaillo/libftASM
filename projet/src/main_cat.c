@@ -6,7 +6,7 @@
 /*   By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/04/05 10:39:06 by vchaillo          #+#    #+#             */
-/*   Updated: 2015/04/05 10:43:18 by vchaillo         ###   ########.fr       */
+/*   Updated: 2015/04/05 11:00:08 by vchaillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ int 	main(int ac, char ** av)
 	(void)ac;
 	(void)av;
     if (ac == 1) 
+	{
         ft_cat(0);
+		ft_cat(open(__FILE__, O_RDONLY));
+	}
     else if (ac == 2) 
 	{
 		ft_cat(open(__FILE__, O_RDONLY));
