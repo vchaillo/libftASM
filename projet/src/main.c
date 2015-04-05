@@ -6,7 +6,7 @@
 /*   By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/27 04:27:13 by vchaillo          #+#    #+#             */
-/*   Updated: 2015/04/05 05:24:28 by vchaillo         ###   ########.fr       */
+/*   Updated: 2015/04/05 07:27:01 by vchaillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -196,12 +196,15 @@ int		main(int ac, char **av)
 /*
 **	Test of function ft_strdup
 */
-
 	char * tata = strdup("cool");
 	char * toto = ft_strdup(tata);
 
 	printf("ft_strdup  \033[32mOK\033[0m :)");
     printf("	original string : [%p] [%s]", tata, tata);
     printf("		duplicate string : [%p] [%s]\n", toto, toto);
+/*
+**	Test of function ft_cat
+*/
+    
 	return (0);
 }
