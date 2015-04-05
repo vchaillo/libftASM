@@ -6,7 +6,7 @@
 #    By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/03/24 16:06:11 by vchaillo          #+#    #+#              #
-#    Updated: 2015/04/05 02:50:54 by vchaillo         ###   ########.fr        #
+#    Updated: 2015/04/05 04:48:25 by vchaillo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRC		=	ft_isdigit.s \
 			ft_strlen.s  \
 			ft_memset.s  \
 			ft_memcpy.s  \
+			ft_strdup.s  \
 
 INC		= -I inc/
 

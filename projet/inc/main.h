@@ -6,7 +6,7 @@
 /*   By: vchaillo <vchaillo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/03/27 05:00:57 by vchaillo          #+#    #+#             */
-/*   Updated: 2015/04/05 02:41:57 by vchaillo         ###   ########.fr       */
+/*   Updated: 2015/04/05 04:25:08 by vchaillo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define MAIN_H
 
 # include <ctype.h>
-# include <stdio.h>
+# include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
 # include <string.h>
@@ -34,5 +34,6 @@ char	*ft_strcat(char *restrict s1, const char *restrict s2);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+char	*ft_strdup(const char *s1);
 
 #endif
